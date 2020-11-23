@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>R&M Lovers</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    
+</head>
+
+<body>
     <div id="root"></div>
-    <p>Olá mundo!</p>
-    <div id="texto">
-      <p>OLÁ MUNDO!!!</p>
-    </div>
-    <div id="texto2"></div>
-    <div id="texto3"></div>
-    <div id="texto4"></div>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'>
+        <ul>
+            <li><a href='http://'>Início</a></li>
+            <li><a href='http://'>Sobre</a></li>
+            <li><a href='http://'>Todos os Personagens</a></li>
+        </ul>
+    </nav>
+
+    <section class="card-container" id="cards-division">
+        <div class="card">
+            <div class="front">
+                <p class="text-front"></p>
+                <img src="" class="image-character">
+            </div>
+            <div class="back">
+                <p class="text-back-status"></p>
+                <p class="text-back-species"></p>
+                <p class="text-back-gender"></p>
+                <p class="text-back-origin"></p>
+                <p class="text-back-location"></p>
+                <p class="text-back-episodes"></p>
+            </div>
+        </div>
+    </section>
+
     <script src="main.js" type="module"></script>
-  </body>
+</body>
+
 </html>
