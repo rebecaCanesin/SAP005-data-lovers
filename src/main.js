@@ -5,69 +5,100 @@ import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(example, data);
 
-const dados = data.results;
+const dataComplete = data.results;
 
-for (const x in dados) {
-    const id = dados[x].id;
 
-    if (id == 1) {
-    const nome = dados[x].name;
-    const genero = dados[x].gender;
-    console.log(nome);
-    console.log(genero);
-    document.getElementById("texto").innerHTML = nome;
-    }  
+window.onload = function (){ 
+    cards ();
 }
 
+function cards() {
 
-const x = document.getElementById("textos");
-const y = x.firstChild;
+//     for (let character of dataComplete) {
+        
+//         const cardCharacter = document.createElement("div");
+//         document.querySelector("#cards-division").appendChild = cardCharacter;
 
-for (let index = 0; index < dados.length; index++) {
+//         cardCharacter.innerHTML = `<div class="card">
+//         <div class="front">
+//     <p class="text-front">Name: ${character.name}</p>
+//             <img src="${character.image}" class="image-character"></img>
+//         </div>
+//         <div class="back">
+//     <p class="text-back-status">Status: ${character.status}</p>
+//             <p class="text-back-species">Species: ${character.species}</p>
+//             <p class="text-back-gender">Gender: ${character.gender}</p>
+//             <p class="text-back-origin">Location of origin: ${character.origin.name}</p>
+//             <p class="text-back-location">Location of residence: ${character.location.name}</p>
+//             <p class="text-back-episodes">Number of episodes: ${character.episode.length}</p>
+//         </div>
+//     </div>`;
+// console.log(cardCharacter);
+
+    //}
+
+    let cards = "";
+   
+    const card = document.querySelector(".card");
+
     
-    const y_clone = y.cloneNode(true);
-    x.appendChild(y_clone);
+
+    for (let x in dataComplete) { 
     
+        const cardCharacter = document.createElement("div");
+        document.querySelector("#cards-division").appendChild = cardCharacter;
+
+            const name = dataComplete[x].name;
+            const image = dataComplete[x].image;
+            const gender = dataComplete[x].gender;
+            const episode = dataComplete[x].episode.length;
+            const location = dataComplete[x].location.name;
+            const origin = dataComplete[x].origin.name;
+            const species = dataComplete[x].species;
+            const status = dataComplete[x].status;
+
+            const imageCharacter = document.querySelector(".image-character");
+            const frenteCard = document.querySelector(".text-front");
+            const versoCardStatus = document.querySelector(".text-back-status");
+            const versoCardSpecies = document.querySelector(".text-back-species");
+            const versoCardGender = document.querySelector(".text-back-gender");
+            const versoCardOrigin = document.querySelector(".text-back-origin");
+            const versoCardLocation = document.querySelector(".text-back-location");
+            const versoCardEpisode = document.querySelector(".text-back-episodes");
+
+        cards +=
+            imageCharacter.src= image;
+            frenteCard.textContent = ("Name: " + name);
+            versoCardStatus.textContent = ("Status: " + status);
+            versoCardSpecies.textContent = ("Specie: " + species);
+            versoCardGender.textContent = ("Gender: " + gender);
+            versoCardOrigin.textContent = ("Location of origin: " + origin);
+            versoCardLocation.textContent = ("Location of residence: " + location);
+            versoCardEpisode.textContent = ("Number of episodes: " + episode);
+
+
+        
+        
+            console.log(card.innerHTML);
+            cardCharacter.innerHTML += cards;
+    //     // const cardClone = card.cloneNode(true);
+    //     // document.querySelector(".card-container").appendChild = cardClone;
+    //     //console.log(cardClone);  
+     }
+     
 }
-
-
-
-
-
-
 
 
 
     //  const personagens = dados.filter(personagem => (personagem.id ===1));
     //  console.log(personagens);
     //  document.getElementById("texto").innerHTML = personagens;
-    
 
-// for (let index = 0; index < dados.length; index++) {
-   
-    
-//         const element = dados[index];
-//          console.log(element.id)
-//          console.log(element.name)
-//          console.log(element.gender)
-    
-//         document.getElementById("texto").innerHTML += element.name;
-//         document.getElementById("texto2").innerHTML += element.status;
-//         document.getElementById("texto3").innerHTML += element.gender;
-//         document.getElementById("texto4").innerHTML += element.species;
-    
-     
-// }
-
-// for (const element in dados) {
-//     const i = dados.length
-//    if (dados[i]) {
-//         const element = dados[index];
-//         console.log(element.id)
-//         console.log(element.name)
-//         console.log(element.gender)
-//         document.getElementById("texto").innerHTML = element.name + element.gender;
-//    }else{
-
-//    }
-// }
+function updatemenu() {
+    if (document.getElementById('responsive-menu').checked == true) {
+    document.getElementById('menu').style.borderBottomRightRadius = '0';
+    document.getElementById('menu').style.borderBottomLeftRadius = '0';
+    } else {
+    document.getElementById('menu').style.borderRadius = '41px';
+    }
+};
