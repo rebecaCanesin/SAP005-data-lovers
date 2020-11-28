@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>R&M Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+
+<body>
+    <div id="root"></div>
+    <header class="top-page">
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'>
+            <ul>
+                <li><a href='index.html'>HOME</a></li> 
+                <li><a href='characters.html'>CHARACTERS</a></li>
+                <li><a href='episodes.html'>EPISODES</a></li>
+            </ul>
+        </nav>
+        <img src="https://cdn.shopify.com/s/files/1/0346/8063/5529/collections/rick-morty-collection-banner_1400x.jpg?v=1590095280" id="image-header">
+    </header>
+    <section>
+        <input type="search" id="searchCharacter">
+        <select class="gender-filter" id="genderFilter">
+            <option value="Gender">Gender</option>
+            <option value="Male" id="male">Male</option>
+            <option value="Female">Female</option>
+            <option value="unknown">Unknown</option>
+            <option value="Genderless">Genderless</option>
+        </select>
+        <select class="species-filter" id="speciesFilter">
+            <option value="Species">Species</option>
+            <option value="Human">Human</option>
+            <option value="Alien">Alien</option>
+            <option value="Humanoid">Humanoid</option>
+            <option value="unknown">Unknown</option>
+            <option value="Poopybutthole">Poopybutthole</option>
+            <option value="Mytholog">Mytholog</option>
+            <option value="Animal">Animal</option>
+            <option value="Vampire">Vampire</option>
+            <option value="Robot">Robot</option>
+            <option value="Cronenberg">Cronenberg</option>
+            <option value="Disease">Disease</option>
+            <option value="Parasite">Parasite</option>
+
+        </select>
+        <select class="status-filter" id="statusFilter">
+            <option value="Status">Status</option>
+            <option value="Alive">Alive</option>
+            <option value="Dead">Dead</option>
+            <option value="unknown">Unknown</option>
+        </select>
+
+        <select class="origin-filter" id="originFilter">
+            <option value="Origin">Origin</option>
+            <option value="Earth (Replacement Dimension)">Earth (Replacement Dimension)</option>
+            <option value="unknown">Unknown</option>
+            <option value="Earth (C-137)">Earth (C-137)</option>
+            <option value="Abadango">Abadango</option>
+            <option value="Signus 5 Expanse">Signus 5 Expanse</option>
+            <option value="Post-Apocalyptic Earth">Post-Apocalyptic Earth</option>
+            <option value="Purge Planet">Purge Planet</option>
+            <option value="Venzenulon 7">Venzenulon 7</option>
+            <option value="Bepis 9">Bepis 9</option>
+            <option value="Earth (C-500A)">Earth (C-500A)</option>
+            <option value="Earth (Evil Rick's Target Dimension)">Earth (Evil Rick's Target Dimension)</option>
+            <option value="Nuptia 4">Nuptia 4</option>
+            <option value="Fantasy World">Fantasy World</option>
+            <option value="Bird World">Bird World</option>
+            <option value="Gromflom Prime">Gromflom Prime</option>
+            <option value="Rick's Battery Microverse">Rick's Battery Microverse</option>
+            <option value="The Menagerie">The Menagerie</option>
+            <option value="Earth (K-83)">Earth (K-83)</option>
+            <option value="Hideout Planet">Hideout Planet</option>
+            <option value="Cronenberg Earth">Cronenberg Earth</option>
+            <option value="Giant's Town">Giant's Town</option>
+            <option value="Unity's Planet">Unity's Planet</option>
+            <option value="Earth (Unknown dimension)">Earth (Unknown dimension)</option>
+            <option value="Anatomy Park">Anatomy Park</option>
+            <option value="Earth (J19ζ7)">Earth (J19ζ7)</option>
+            <option value="Roy: A Life Well Lived">Roy: A Life Well Lived</option>
+            <option value="Eric Stoltz Mask Earth">Eric Stoltz Mask Earth</option>
+            <option value="Glaagablaaga">Glaagablaaga</option>
+            <option value="Gazorpazorp">Gazorpazorp</option>
+            <option value="Resort Planet">Resort Planet</option>
+            <option value="Hamster in Butt World">Hamster in Butt World</option>
+            <option value="Earth (Giant Telepathic Spiders Dimension)">Earth (Giant Telepathic Spiders Dimension)</option>
+            <option value="Alphabetrium">Alphabetrium</option>
+            <option value="Earth (5-126)">Earth (5-126)</option>
+            <option value="Krootabulon">Krootabulon</option>
+            <option value="Pluto">Pluto</option>
+            <option value="Larva Alien's Planet">Larva Alien's Planet</option>
+            <option value="Zeep Xanflorp's Miniverse">Zeep Xanflorp's Miniverse</option>
+            <option value="Mr. Goldenfold's dream">Mr. Goldenfold's dream</option>
+            <option value="Mr. Meeseeks Box">Mr. Meeseeks Box</option>
+            <option value="Mega Gargantuan Kingdom">Mega Gargantuan Kingdom</option>
+            <option value="Gear World">Gear World</option>
+            <option value="Earth (D-99)">Earth (D-99)</option>
+            <option value="Earth (D716)">Earth (D716)</option>
+            <option value="Earth (D716-B)">Earth (D716-B)</option>
+            <option value="Earth (D716-C)">Earth (D716-C)</option>
+            <option value="Earth (J-22)">Earth (J-22)</option>
+            <option value="Earth (K-22)">Earth (K-22)</option>
+            <option value="Planet Squanch">Planet Squanch</option>
+            <option value="Detoxifier">Detoxifier</option>
+            <option value="Kyle's Teenyverse">Kyle's Teenyverse</option>
+            <option value="Trunk World">Trunk World</option>
+            <option value="Plopstar">Plopstar</option>
+            <option value="Girvonesk">Girvonesk</option>
+            <option value="Snuffles' Dream">Snuffles' Dream</option>
+            <option value="Interdimensional Cable">Interdimensional Cable</option>
+            <option value="Earth (Phone Dimension)">Earth (Phone Dimension)</option>
+            <option value="Earth (Pizza Dimension)">Earth (Pizza Dimension)</option>
+            <option value="Greasy Grandma World">Greasy Grandma World</option>
+            <option value="Earth (Chair Dimension)">Earth (Chair Dimension)</option>
+            <option value="Testicle Monster Dimension">Testicle Monster Dimension</option>
+            <option value="Árboles Mentirosos">Árboles Mentirosos</option>
+            <option value="Citadel of Ricks">Citadel of Ricks</option>
+        </select>
+        <select class="location-filter" id="locationFilter">
+            <option value="Location">Location</option>
+            <option value="Earth (Replacement Dimension)">Earth (Replacement Dimension)</option>
+            <option value="unknown">Unknown</option>
+            <option value="Earth (C-137)">Earth (C-137)</option>
+            <option value="Citadel of Ricks">Citadel of Ricks</option>
+            <option value="Earth (C-500A)">Earth (C-500A)</option>
+            <option value="Interdimensional Cable">Interdimensional Cable</option>
+            <option value="Earth (Phone Dimension)">Earth (Phone Dimension)</option>
+            <option value="Earth (Pizza Dimension)">Earth (Pizza Dimension)</option>
+            <option value="Earth (Chair Dimension)">Earth (Chair Dimension)</option>
+            <option value="Pluto">Pluto</option>
+            <option value="Abadango">Abadango</option>
+            <option value="Testicle Monster Dimension">Testicle Monster Dimension</option>
+            <option value="Worldender's lair">Worldender's lair</option>
+            <option value="Anatomy Park">Anatomy Park</option>
+            <option value="Immortality Field Resort">Immortality Field Resort</option>
+            <option value="Signus 5 Expanse">Signus 5 Expanse</option>
+            <option value="Post-Apocalyptic Earth">Post-Apocalyptic Earth</option>
+            <option value="Purge Planet">Purge Planet</option>
+            <option value="Venzenulon 7">Venzenulon 7</option>
+            <option value="Bepis 9">Bepis 9</option>
+            <option value="Earth (Evil Rick's Target Dimension)">Earth (Evil Rick's Target Dimension)</option>
+            <option value="Fantasy World">Fantasy World</option>
+            <option value="Nuptia 4">Nuptia 4</option>
+            <option value="Planet Squanch">Planet Squanch</option>
+            <option value="Mr. Goldenfold's dream">Mr. Goldenfold's dream</option>
+            <option value="Rick's Battery Microverse">Rick's Battery Microverse</option>
+            <option value="The Menagerie">The Menagerie</option>
+            <option value="Hideout Planet">Hideout Planet</option>
+            <option value="Zigerion's Base">Zigerion's Base</option>
+            <option value="Giant's Town">Giant's Town</option>
+            <option value="Unity's Planet">Unity's Planet</option>
+            <option value="Dorian 5">Dorian 5</option>
+            <option value="Earth (Unknown dimension)">Earth (Unknown dimension)</option>
+            <option value="St. Gloopy Noops Hospital">St. Gloopy Noops Hospital</option>
+            <option value="Roy: A Life Well Lived">Roy: A Life Well Lived</option>
+            <option value="Resort Planet">Resort Planet</option>
+            <option value="Interdimensional Customs">Interdimensional Customs</option>
+            <option value="Galactic Federation Prison">Galactic Federation Prison</option>
+            <option value="Hamster in Butt World">Hamster in Butt World</option>
+            <option value="Earth (Giant Telepathic Spiders Dimension)">Earth (Giant Telepathic Spiders Dimension)</option>
+            <option value="Alphabetrium">Alphabetrium</option>
+            <option value="Gazorpazorp">Gazorpazorp</option>
+            <option value="Jerryboree">Jerryboree</option>
+            <option value="Zigerion's Base">Zigerion's Base</option>
+            <option value="Kyle's Teenyverse">Kyle's Teenyverse</option>
+            <option value="Immortality Field Resort">Immortality Field Resort</option>
+            <option value="Blips and Chitz">Blips and Chitz</option>
+            <option value="Vindicator's Base">Vindicator's Base</option>
+            <option value="Pawn Shop Planet">Pawn Shop Planet</option>
+            <option value="Gear World">Gear World</option>
+            <option value="Zeep Xanflorp's Miniverse">Zeep Xanflorp's Miniverse</option>
+            <option value="Froopyland">Froopyland</option>
+            <option value="Plopstar">Plopstar</option>
+            <option value="Snuffles' Dream">Snuffles' Dream</option>
+            <option value="Greasy Grandma World">Greasy Grandma World</option>
+            <option value="Alien Day Spa">Alien Day Spa</option>
+        </select>
+    </section>
+   
+    <section class="card-section">
+        <div class="card-container"></div>
+    </section>
+    
+
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
