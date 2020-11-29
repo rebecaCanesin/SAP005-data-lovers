@@ -23,7 +23,23 @@
         <img src="https://cdn.shopify.com/s/files/1/0346/8063/5529/collections/rick-morty-collection-banner_1400x.jpg?v=1590095280" id="image-header">
     </header>
     
+    <section>
+        <div>
+            <select class="season-filter" id="seasonFilter">
+                <option value="season">Season</option>
+                <option value="S01">1</option>
+                <option value="S02">2</option>
+                <option value="S03">3</option>
+                <option value="S04">4</option>
+            </select>
+        </div>
+        
+        <div class="curiosity-box">
+            <p>Curiosities about the show:</p>
+            <p id="curiosity-paragraph"></p>
 
+        </div>
+    </section>
     <section>
         <div class="episode-list">
             
@@ -31,7 +47,8 @@
         </div>
     </section>
 
-    <script src="main.js" type="module"></script>
+    <script src="episodes.js" type="module"></script>
+    <!-- <script src="main.js" type="module"></script>     -->
 </body>
 
 </html>
