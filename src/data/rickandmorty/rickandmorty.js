@@ -11160,6 +11160,36 @@ export default {
           ],
           "url": "https://rickandmortyapi.com/api/character/493",
           "created": "2018-05-22T17:51:07.373Z"
-      }
-  ]
+      },
+      {
+          "id":592,
+          "name":"Phoenixperson",
+          "status":"Alive",
+          "species":"Alien",
+          "type":"Cyborg",
+          "gender":"Male",
+          "origin":{"name":"Bird World","url":"https://rickandmortyapi.com/api/location/15"},
+          "location":{"name":"Earth (Replacement Dimension)",
+          "url":"https://rickandmortyapi.com/api/location/20"},
+          "image":"https://rickandmortyapi.com/api/character/avatar/592.jpeg",
+          "episode":["https://rickandmortyapi.com/api/episode/22",
+          "https://rickandmortyapi.com/api/episode/41"],
+          "url":"https://rickandmortyapi.com/api/character/592",
+          "created":"2020-08-05T12:43:16.671Z"
+        },
+        {
+            "id":663,
+            "name":"Reggie",
+            "status":"Dead",
+            "species":"Mythological Creature",
+            "type":"Zeus",
+            "gender":"Male",
+            "origin":{"name":"Mount Olympus","url":"https://rickandmortyapi.com/api/location/90"},
+            "location":{"name":"Gaia","url":"https://rickandmortyapi.com/api/location/106"},
+            "image":"https://rickandmortyapi.com/api/character/avatar/663.jpeg",
+            "episode":["https://rickandmortyapi.com/api/episode/40"],
+            "url":"https://rickandmortyapi.com/api/character/663",
+            "created":"2020-08-13T12:17:15.344Z"
+        },
+    ]
 };

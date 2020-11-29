@@ -4,19 +4,19 @@ import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(example, data);
 
-window.onload = cards();
+
 
 const dataComplete = data.results;
 
 
-
+window.onload = cards();
 
 const genderFilter = document.querySelector("#genderFilter");
 const speciesFilter = document.querySelector("#speciesFilter");
 const statusFilter = document.querySelector("#statusFilter");
 const originFilter = document.querySelector("#originFilter");
 const locationFilter = document.querySelector("#locationFilter");
-const searchCharacter = document.querySelector("#searchCharacter");
+const searchInput = document.querySelector("#searchCharacter");
 
 
 
@@ -49,6 +49,37 @@ function clear () {
     document.querySelector(".card-container").innerHTML = " ";
 }
 
+searchInput.addEventListener("keyup", searchCharacter);
+
+function searchCharacter () {
+    clear();
+    const nameShow = dataComplete.filter(characterCard => characterCard.name.startsWith(searchInput.value));
+    if (searchInput.value === "Todos" || searchInput === "All") {
+        cards();
+    }
+
+    let cardCharacter = " ";
+    for (let character of nameShow) {
+        cardCharacter += 
+        `<div class="card">
+            <div class="front">
+                <h2 class="text-front">${character.name}</h2>
+                <img src="${character.image}" class="image-character"></img>
+            </div>
+            <div class="back">
+                <ul>
+                    <li class="text-back-status">Status: ${character.status}</li>
+                    <li class="text-back-species">Species: ${character.species}</li>
+                    <li class="text-back-gender">Gender: ${character.gender}</li>
+                    <li class="text-back-origin">Origin: ${character.origin.name}</li>
+                    <li class="text-back-location">Location: ${character.location.name}</li>
+                    <li class="text-back-episodes">Number of episodes: ${character.episode.length}</li>
+                </ul>
+            </div>
+        </div>`; 
+    }
+    document.querySelector(".card-container").innerHTML += cardCharacter;
+}
 
 
 statusFilter.addEventListener("change", statusFilterChange);
