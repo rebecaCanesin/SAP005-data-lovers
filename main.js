@@ -47,12 +47,16 @@ function cards() {
 
 function clear () {
     document.querySelector(".card-container").innerHTML = " ";
+    document.querySelector("#curiosity-paragraph").innerHTML = " ";
 }
+
+
 
 searchInput.addEventListener("keyup", searchCharacter);
 
 function searchCharacter () {
     clear();
+    document.querySelector("#curiosity-paragraph").innerHTML = " ";
     const nameShow = dataComplete.filter(characterCard => characterCard.name.startsWith(searchInput.value));
     if (searchInput.value === "Todos" || searchInput === "All") {
         cards();
@@ -82,6 +86,7 @@ function searchCharacter () {
 }
 
 
+   
 statusFilter.addEventListener("change", statusFilterChange);
 //console.log(statusFilter.length);
 
@@ -89,6 +94,7 @@ function statusFilterChange() {
     clear();
     const statusShow = dataComplete.filter(characterCard => characterCard.status === statusFilter.value);
     const quantCharacterStatus = statusShow.length;
+    const calcStatus = Math.round(((quantCharacterStatus / 495)*100));
     if (statusFilter.value === "Status") {
         cards();
     }
@@ -115,7 +121,10 @@ function statusFilterChange() {
         </div>`; 
     }
     document.querySelector(".card-container").innerHTML += cardCharacter;
+    document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterStatus} characters with ${statusFilter.value} status in the show. This means ${calcStatus}% of the characters are ${statusFilter.value}.`
+
 }
+
 
 genderFilter.addEventListener("change", genderFilterChange);
 //console.log(genderFilter.length);
@@ -123,7 +132,7 @@ function genderFilterChange() {
     clear();
     const genderShow = dataComplete.filter(characterCard => characterCard.gender === genderFilter.value);
     const quantCharacterGender = genderShow.length;
-    
+    const calcGender = Math.round(((quantCharacterGender / 495)*100));
     if (genderFilter.value === "Gender") {
         cards();
     }
@@ -149,15 +158,17 @@ function genderFilterChange() {
         </div>`; 
     }
     document.querySelector(".card-container").innerHTML += cardCharacter;
+    document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterGender} ${genderFilter.value} characters in the show. This means ${calcGender}% of the characters are ${genderFilter.value}.`
 }
 
+
 speciesFilter.addEventListener("change", speciesFilterFilterChange);
-//console.log(speciesFilter.length);
+// console.log(speciesFilter.length);
 function speciesFilterFilterChange() {
     clear();
     const speciesShow = dataComplete.filter(characterCard => characterCard.species === speciesFilter.value);
     const quantCharacterSpecies = speciesShow.length;
-    
+    const calcSpecies = Math.round(((quantCharacterSpecies / 495)*100));
     if (speciesFilter.value === "Species") {
         cards();
     }
@@ -183,6 +194,7 @@ function speciesFilterFilterChange() {
         </div>`; 
     }
     document.querySelector(".card-container").innerHTML += cardCharacter;
+    document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterSpecies} characters of the ${speciesFilter.value} species in the show. This means ${calcSpecies}% are ${speciesFilter.value}.`
 }
 
 originFilter.addEventListener("change", originFilterChange);
@@ -191,7 +203,7 @@ function originFilterChange() {
     clear();
     const originShow = dataComplete.filter(characterCard => characterCard.origin.name === originFilter.value);
     const quantCharacterOrigin = originShow.length;
-    
+    const calcOrigin = Math.round(((quantCharacterOrigin / 495)*100));
     if (originFilter.value === "Origin") {
         cards();
     }
@@ -217,6 +229,7 @@ function originFilterChange() {
         </div>`; 
     }
     document.querySelector(".card-container").innerHTML += cardCharacter;
+    document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterOrigin} characters from ${originFilter.value} in the show. THis means ${calcOrigin}% of the characters are from there.`
 }
 
 locationFilter.addEventListener("change", locationFilterChange);
@@ -225,7 +238,7 @@ function locationFilterChange() {
     clear()
     const locationShow = dataComplete.filter(characterCard => characterCard.location.name === locationFilter.value);
     const quantCharacterLocation = locationShow.length;
-
+    const calcLocation = Math.round(((quantCharacterLocation / 495)*100));
     if (locationFilter.value === "Location") {
         cards();
     }
@@ -251,6 +264,7 @@ function locationFilterChange() {
         </div>`; 
     }
     document.querySelector(".card-container").innerHTML += cardCharacter;
+    document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterLocation} characters living or dead at ${locationFilter.value} in the show. This represents ${calcLocation}% of the characters.`
 }
 
 

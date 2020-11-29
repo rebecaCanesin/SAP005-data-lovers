@@ -4,11 +4,9 @@ console.log(data);
 
 const episodeData = data.episodes;
 
-console.log(episodeData);
-
 window.onload = episodeList;
 
-
+const curiosityText = document.querySelector("#curiosity-paragraph");
 const seasonFilter = document.querySelector("#seasonFilter");
 
 
@@ -18,17 +16,18 @@ function episodeList (){
     for (let episode of episodeData) {
         epiList += 
         `<div class="epi-card">
-            <div class="epi-front">
-                <h2 class="text-front">${episode.name}</h2>
-                <h2 class="text-front">${episode.air_date}</h2>
-                <h2 class="text-front">${episode.episode}</h2>
-                <h2 class="text-front">${episode.season}</h2>
-                <h2 class="text-front">${episode.characters}</h2>
-            </div>
-            <div class="epi-back">
-                <p>Sinopse</p>
-            </div>
-        </div>`; 
+        <div class="epi-front">
+            <h2 class="text-front">Episode Name: ${episode.name}</h2>
+            <h2 class="text-front">First air date: ${episode.air_date}</h2>
+            <h2 class="text-front">Number of the episode: ${episode.episode}</h2>
+            <h2 class="text-front">Season: ${episode.season}</h2>
+            <h2 class="text-front">List of characters: ${episode.characters.length}</h2>
+        </div>
+        <div class="epi-back">
+            <p>Sinopse</p>
+            <p>${episode.sinopse}</p>
+        </div>
+    </div>`; 
     }
     document.querySelector(".episode-list").innerHTML += epiList;
     
@@ -62,4 +61,12 @@ function seasonChange () {
         </div>`; 
     }
     document.querySelector(".episode-list").innerHTML += epiList;
+
+    if (seasonFilter.value == "1") {
+       console.log( curiosityText.innerHTML = ("There are" + "x" + "episodes in this season."))
+    }
 }
+
+
+
+

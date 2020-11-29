@@ -1,6 +1,6 @@
 export default{
     "info":{
-         "count":31
+         "count":41
     },
        
     "episodes": [
@@ -1126,6 +1126,118 @@ export default{
             "url":"https://rickandmortyapi.com/api/episode/31",
             "created":"2017-11-10T12:56:36.929Z",
             "sinopse": "No último episódio da terceira temporada, Beth começa a ter uma crise de identidade, se perguntando se ela é a Beth real ou um clone. O presidente precisa da ajuda de Rick e Morty para combater um monstro. Beth volta com Jerry e o episódio acaba com a família feliz, exceto por Rick, que fica triste ao perder sua posição de dominância."
+        },
+        {
+            "id":32,
+            "name": "Edge of Tomorty: Rick Die Rickpeat",
+            "air_date":"November 10, 2019",
+            "episode":"E01",
+            "season":"S04" ,
+            "characters":"",
+            "url":"https://rickandmortyapi.com/api/episode/32",
+            "created":"",
+            "sinopse": "Depois do café da manhã em família, Rick chama Morty para ajudá-lo a pegar cristais da morte em Forbodulon Prime, mas ele não se sai muito bem."
+        },
+        {
+            "id":33,
+            "name": "The Old Man and the Seat" ,
+            "air_date":"November 17, 2019",
+            "episode":"E02",
+            "season":"S04" ,
+            "characters":"",
+            "url":"https://rickandmortyapi.com/api/episode/33",
+            "created":"",
+            "sinopse": "Jerry desenvolve um aplicativo para um alienígena teimoso com uma mensagem tatuada na testa Rick está determinado a descobrir quem usou a privada dele."
+        },
+        {
+            "id":34,
+            "name": "One Crew over the Crewcoo's Morty" ,
+            "air_date":"November 24, 2019",
+            "episode":"E03",
+            "season":"S04" ,
+            "characters":"",
+            "url":"https://rickandmortyapi.com/api/episode/34",
+            "created":"",
+            "sinopse": "Rick junta uma equipe para invadir uma convenção sobre roubos. Depois, monta um outro time para deter um robô planejador de roubos. Morty escreve um roteiro de filme de roubo."
+        },
+        {
+            "id":35,
+            "name": "Claw and Hoarder: Special Ricktim's Morty" ,
+            "air_date":"December 8, 2019",
+            "episode":"E04",
+            "season":"S04" ,
+            "characters":"",
+            "url":"https://rickandmortyapi.com/api/episode/35",
+            "created":"",
+            "sinopse": "Morty insiste em ter um dragão de estimação, e Rick acaba cedendo (claro que não dá certo). Jerry vai para a Flórida com um gato falante."
+        },
+        {
+            "id":36,
+            "name": "Rattlestar Ricklactica" ,
+            "air_date":"December 15, 2019",
+            "episode":"E05",
+            "season":"S04" ,
+            "characters":"",
+            "url":"https://rickandmortyapi.com/api/episode/36",
+            "created":"",
+            "sinopse": "Morty é mordido por uma cobra espacial, ele e Rick se envolvem em uma guerra de serpentes. Jerry tenta provar que consegue pendurar as luzes de natal sem a ajuda de Rick."
+        },
+        {
+            "id":37,
+            "name": "Never Ricking Morty" ,
+            "air_date":"May 3, 2020",
+            "episode":"E06",
+            "season":"S04" ,
+            "characters":"",
+            "url":"https://rickandmortyapi.com/api/episode/37",
+            "created":"",
+            "sinopse": "Rick e Morty estão presos em um dispositivo de história disfarçado de trem com passageiros obcecados por Rick e tentam descobrir como fazê-lo parar."
+        },
+        {
+            "id":38,
+            "name": "Promortyus",
+            "air_date":"May 10, 2020",
+            "episode":"E07",
+            "season":"S04" ,
+            "characters":"",
+            "url":"https://rickandmortyapi.com/api/episode/38",
+            "created":"",
+            "sinopse": "Rick e Morty precisam lidar com parasitas sugadores de rostos, mas a situação fica ainda pior quando percebem que sequestraram Summer no planeta alienígena."
+        },
+        {
+            "id":39,
+            "name": "The Vat of Acid Episode" ,
+            "air_date":"May 17, 2020",
+            "episode":"E08",
+            "season":"S04" ,
+            "characters":"",
+            "url":"https://rickandmortyapi.com/api/episode/39",
+            "created":"",
+            "sinopse": "Morty desafia Rick a desenvolver um dipositivo de salvar estilo videogame para que ele possa fazer as coisas na vida real e depois voltar para o save point."
+        },
+        {
+            "id":40,
+            "name": "Childrick of Mort" ,
+            "air_date":"May 24, 2020",
+            "episode":"E09",
+            "season":"S04" ,
+            "characters":"",
+            "url":"https://rickandmortyapi.com/api/episode/40",
+            "created":"",
+            "sinopse": "O plano de Jerry de acampar com a família vai por água abaixo quando Rick descobre que talvez tenha engravidado um planeta."
+
+        },
+        {
+            "id":41,
+            "name": "Star Mort Rickturn of the Jerri" ,
+            "air_date":"May 31, 2020",
+            "episode":"E10",
+            "season":"S04" ,
+            "characters":"",
+            "url":"https://rickandmortyapi.com/api/episode/41",
+            "created":"",
+            "sinopse": "Duas Beths, um removedor de planetas e alguns conhecidos do passado forçam Rick e a família a fazer uma Star Wars para salvar a Terra."
+
         }
     ]
 
