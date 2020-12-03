@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>R&M Lovers</title>
+    <title>RICKPEDIA</title>
     <link rel="stylesheet" href="style.css" />
     
 </head>
@@ -12,7 +12,7 @@
     <div id="root"></div>
     <header class="top-page">
         <nav id='menu'>
-            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'>
+            
             <ul>
                 <li><a href='index.html'>HOME</a></li>
                
@@ -20,12 +20,12 @@
                 <li><a href='episodes.html'>EPISODES</a></li>
             </ul>
         </nav>
-        <img src="https://cdn.shopify.com/s/files/1/0346/8063/5529/collections/rick-morty-collection-banner_1400x.jpg?v=1590095280" id="image-header">
+        <a href="index.html"><img src="https://fontmeme.com/permalink/201201/45a0655f974e73664ce223427e239425.png" alt="fonte-get-schwifty" border="0"></a>
     </header>
     
     <section>
-        <div>
-            <select class="season-filter" id="seasonFilter">
+        <div class="season-filter">
+            <select  id="seasonFilter">
                 <option value="season">Season</option>
                 <option value="S01">1</option>
                 <option value="S02">2</option>
@@ -33,19 +33,25 @@
                 <option value="S04">4</option>
             </select>
         </div>
-        
-        <div class="curiosity-box">
-            <p>Curiosities about the show:</p>
+    </section>
+    <!-- <section class="curiosity-section">
+         <div class="curiosity-box">
+            <p id="curiosity-title">Curiosities about the show:</p>
             <p id="curiosity-paragraph"></p>
 
         </div>
-    </section>
+    </section>    -->
+       
+    
     <section>
-        <div class="episode-list">
-            
-
-        </div>
+        <div class="episode-list"></div>
     </section>
+
+    <footer class="site-footer">
+        <div>
+            <p>Copyright © 2020 Rickpedia | Developed by Rebeca</p>
+        </div>
+    </footer>
 
     <script src="episodes.js" type="module"></script>
     <!-- <script src="main.js" type="module"></script>     -->
