@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>R&M Lovers</title>
+    <title>RICKPEDIA</title>
     <link rel="stylesheet" href="style.css" />
     
 </head>
@@ -12,17 +12,17 @@
     <div id="root"></div>
     <header class="top-page">
         <nav id='menu'>
-            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'>
+            
             <ul>
                 <li><a href='index.html'>HOME</a></li> 
                 <li><a href='characters.html'>CHARACTERS</a></li>
                 <li><a href='episodes.html'>EPISODES</a></li>
             </ul>
         </nav>
-        <img src="https://cdn.shopify.com/s/files/1/0346/8063/5529/collections/rick-morty-collection-banner_1400x.jpg?v=1590095280" id="image-header">
+        <a href="index.html"><img src="https://fontmeme.com/permalink/201201/45a0655f974e73664ce223427e239425.png" alt="fonte-get-schwifty" border="0"></a>
     </header>
-    <section>
-        <input type="search" id="searchCharacter">
+    <section class="section-filters">
+        <input type="search" class="search-filter" id="searchCharacter" placeholder="Search for a character">
         <select class="gender-filter" id="genderFilter">
             <option value="Gender">Gender</option>
             <option value="Male" id="male">Male</option>
@@ -178,17 +178,27 @@
             <option value="Greasy Grandma World">Greasy Grandma World</option>
             <option value="Alien Day Spa">Alien Day Spa</option>
         </select>
+        <select class="sort-filter" id="sortFilter">
+            <option value="Sort">Sort Characters</option>
+            <option value="A">A to Z</option>
+            <option value="Z">Z to A</option>
+        </select>
+    </section>
+    <section class="curiosity-section">
         <div class="curiosity-box">
-            <p>Curiosities about the show:</p>
+            <p id="curiosity-title">Curiosities about the show:</p>
             <p id="curiosity-paragraph"></p>
 
         </div>
     </section>
-   
     <section class="card-section">
         <div class="card-container"></div>
     </section>
-    
+    <footer class="site-footer">
+        <div>
+            <p>Copyright © 2020 Rickpedia | Developed by Rebeca</p>
+        </div>
+    </footer>
 
     <script src="main.js" type="module"></script>
 </body>
