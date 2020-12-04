@@ -84,7 +84,7 @@ genderFilter.addEventListener("change", () => {
     document.querySelector(".card-container").innerHTML += cards(genderResult);
     const quantCharacterGender = genderResult.length;
     const calcGender = Math.round(((quantCharacterGender / numberOfCharacters)*100));
-    document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterGender} ${genderFilter.value} characters in the show. This means ${calcGender}% of the characters are ${genderFilter.value}.`
+    document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterGender} ${genderFilter.value} gender characters in the show. This means ${calcGender}% of the characters are ${genderFilter.value} gender.`
     if(genderFilter.value === "Gender"){
         document.querySelector(".card-container").innerHTML = cards(dataComplete);
         document.querySelector("#curiosity-paragraph").innerHTML = "";
@@ -143,5 +143,5 @@ sortFilter.addEventListener ("change", () => {
     clear();
     const orderedCharacters = sortCharacters(sortFilter.value, dataComplete);
     document.querySelector(".card-container").innerHTML += cards(orderedCharacters);
-
+    
 });

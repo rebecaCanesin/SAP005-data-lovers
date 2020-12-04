@@ -33,14 +33,13 @@ export const searchChange = (select, data) => {
 export const sortCharacters = (sortfilter, data) => {
  
   if(sortfilter === "A"){
-      const orderedCharacters = data.sort((a, b) => ((a.name).localeCompare(b.name)));
-      return orderedCharacters;
+    const orderedCharacters = data.sort((a, b) => ((a.name).localeCompare(b.name)));
+    return orderedCharacters;
       
   }else if (sortfilter === "Z"){
-      const orderedCharacters = data.sort((a, b) => ((a.name).localeCompare(b.name)));
-      const orderInReverse = orderedCharacters.reverse();
-      return orderInReverse;
-    
+    const orderedCharacters = data.sort((a, b) => ((a.name).localeCompare(b.name)));
+    const orderInReverse = orderedCharacters.reverse();
+    return orderInReverse;
   }
   return data;
 }
