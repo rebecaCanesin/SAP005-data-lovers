@@ -2,7 +2,6 @@ body{
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    width: 100vw;
     background-image: url('https://media.istockphoto.com/vectors/starry-seamless-pattern-splashed-hand-draw-universe-and-galaxy-dots-vector-id904278506?k=6&m=904278506&s=170667a&w=0&h=tBQyNVBnD8daizFDCVmUy-B6H3eiyBAKa7Atpe4ooPs=');
     background-color: #000000;   
 }
@@ -10,7 +9,6 @@ body{
 .top-page{
     display: flex;
     flex-direction: column;
-    width: 100vw;
     justify-content: center;
     align-items: center;
 }
@@ -103,20 +101,22 @@ body{
     flex: 0 1 100%;
     border: none;
     margin-top: 50px;
-    /* width: 1250px;
-    height: 300px; */
-    @media (max-width: 600px){
-        
-    }
+    
+    
 }
 
-.section-filter{
+.section-filters{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 100vw;
     margin-top: 50px;
+}
+@media (max-width: 600px) {
+    .section-filters{
+        flex-direction: column;
+        
+    }
 }
 
 .search-filter, 
@@ -137,8 +137,18 @@ body{
     -webkit-box-shadow: 3px 3px 3px rgb(255, 255, 255);
     -moz-box-shadow: 3px 3px 3px rgb(255, 255, 255);
     margin-top: 50px;
+}
 
-
+@media (max-width: 600px){
+    .search-filter, 
+.status-filter, 
+.gender-filter, 
+.species-filter, 
+.origin-filter, 
+.location-filter,
+.sort-filter {
+    margin-top: 10px;
+}
 }
 
 .card {
@@ -353,7 +363,6 @@ p{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    width: 100vw;
     height: 150px;
     margin-top: 150px;
     padding: 50px;
@@ -383,16 +392,12 @@ p{
     -moz-box-shadow: 3px 3px 3px rgb(255, 255, 255);
 }
 
-@media (max-width: 600px) {
-    .section-filter{
-        flex-direction: column;
-    }
-}
+
 
 .curiosity-section{
     display: flex;
     justify-content: center;
-    width: 100vw;
+    /* width: 100vw; */
     font-size: 35px;
     background-color: rgba(0, 0, 0, 0.562);
 }
@@ -401,7 +406,7 @@ p{
     font-size: 20px;
 }
 .text-home{
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     margin-top: 70px;
     display: flex;

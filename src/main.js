@@ -1,8 +1,8 @@
-import { example } from './data.js';
+import { statusChange, genderChange, speciesChange, originChange, locationChange, searchChange, sortCharacters} from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+// console.log(data);
 
 
 
@@ -53,111 +53,95 @@ function clear () {
 
 
 
-searchInput.addEventListener("keyup", searchCharacter);
-
-function searchCharacter () {
+searchInput.addEventListener("keyup", () => {
     clear();
     document.querySelector("#curiosity-paragraph").innerHTML = " ";
-    const nameShow = dataComplete.filter(characterCard => characterCard.name.startsWith(searchInput.value));
-    document.querySelector(".card-container").innerHTML = cards(nameShow);
-}
+    const searchResult = searchChange(searchInput, dataComplete);
+    document.querySelector(".card-container").innerHTML = cards(searchResult);
+});
 
 
-   
-statusFilter.addEventListener("change", statusFilterChange);
-
-function statusFilterChange() {
+statusFilter.addEventListener("change", () => {
     clear();
-    const statusShow = dataComplete.filter(characterCard => characterCard.status === statusFilter.value);
-    const quantCharacterStatus = statusShow.length;
+    const statusResult = statusChange(statusFilter, dataComplete);
+    document.querySelector(".card-container").innerHTML = cards(statusResult);
+    const quantCharacterStatus = statusResult.length;
     const calcStatus = Math.round(((quantCharacterStatus / numberOfCharacters)*100));
-    document.querySelector(".card-container").innerHTML = cards(statusShow);
     document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterStatus} characters with ${statusFilter.value} status in the show. This means ${calcStatus}% of the characters are ${statusFilter.value}.`
+    
     if(statusFilter.value === "Status"){
         document.querySelector(".card-container").innerHTML = cards(dataComplete);
         document.querySelector("#curiosity-paragraph").innerHTML = "";
     }
-}
+});
 
 
-genderFilter.addEventListener("change", genderFilterChange);
 
-function genderFilterChange() {
+
+genderFilter.addEventListener("change", () => {
     clear();
-    const genderShow = dataComplete.filter(characterCard => characterCard.gender === genderFilter.value);
-    const quantCharacterGender = genderShow.length;
+    const genderResult = genderChange(genderFilter, dataComplete);
+    document.querySelector(".card-container").innerHTML += cards(genderResult);
+    const quantCharacterGender = genderResult.length;
     const calcGender = Math.round(((quantCharacterGender / numberOfCharacters)*100));
-    document.querySelector(".card-container").innerHTML += cards(genderShow);
     document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterGender} ${genderFilter.value} characters in the show. This means ${calcGender}% of the characters are ${genderFilter.value}.`
     if(genderFilter.value === "Gender"){
         document.querySelector(".card-container").innerHTML = cards(dataComplete);
         document.querySelector("#curiosity-paragraph").innerHTML = "";
     }
-}
+});
 
 
-speciesFilter.addEventListener("change", speciesFilterFilterChange);
 
-function speciesFilterFilterChange() {
+
+speciesFilter.addEventListener("change", () => {
     clear();
-    const speciesShow = dataComplete.filter(characterCard => characterCard.species === speciesFilter.value);
-    const quantCharacterSpecies = speciesShow.length;
+    const speciesResult = speciesChange(speciesFilter, dataComplete);
+    document.querySelector(".card-container").innerHTML += cards(speciesResult);
+    const quantCharacterSpecies = speciesResult.length;
     const calcSpecies = Math.round(((quantCharacterSpecies / numberOfCharacters)*100));
-    document.querySelector(".card-container").innerHTML += cards(speciesShow);
     document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterSpecies} characters of the ${speciesFilter.value} species in the show. This means ${calcSpecies}% are ${speciesFilter.value}.`
     if(speciesFilter.value === "Species"){
         document.querySelector(".card-container").innerHTML = cards(dataComplete);
         document.querySelector("#curiosity-paragraph").innerHTML = "";
     }
-}
+});
 
-originFilter.addEventListener("change", originFilterChange);
 
-function originFilterChange() {
+
+originFilter.addEventListener("change", () => {
     clear();
-    const originShow = dataComplete.filter(characterCard => characterCard.origin.name === originFilter.value);
-    const quantCharacterOrigin = originShow.length;
+    const originResult = originChange(originFilter, dataComplete);
+    document.querySelector(".card-container").innerHTML += cards(originResult);
+    const quantCharacterOrigin = originResult.length;
     const calcOrigin = Math.round(((quantCharacterOrigin / numberOfCharacters)*100));
-    document.querySelector(".card-container").innerHTML += cards(originShow);
     document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterOrigin} characters from ${originFilter.value} in the show. THis means ${calcOrigin}% of the characters are from there.`
     if(originFilter.value === "Origin"){
         document.querySelector(".card-container").innerHTML = cards(dataComplete);
         document.querySelector("#curiosity-paragraph").innerHTML = "";
     }
-}
+});
 
-locationFilter.addEventListener("change", locationFilterChange);
 
-function locationFilterChange() {
+
+locationFilter.addEventListener("change", () => {
     clear()
-    const locationShow = dataComplete.filter(characterCard => characterCard.location.name === locationFilter.value);
-    const quantCharacterLocation = locationShow.length;
+    const locationResult = locationChange(locationFilter, dataComplete);
+    document.querySelector(".card-container").innerHTML += cards(locationResult);
+    const quantCharacterLocation = locationResult.length;
     const calcLocation = Math.round(((quantCharacterLocation / numberOfCharacters)*100));
-    document.querySelector(".card-container").innerHTML += cards(locationShow);
     document.querySelector("#curiosity-paragraph").innerHTML = `There are ${quantCharacterLocation} characters living or dead at ${locationFilter.value} in the show. This represents ${calcLocation}% of the characters.`
     if(locationFilter.value === "Location"){
         document.querySelector(".card-container").innerHTML = cards(dataComplete);
         document.querySelector("#curiosity-paragraph").innerHTML = "";
     }
-}
+});
 
-sortFilter.addEventListener ("change", sortCharacters)
 
-function sortCharacters () {
-    clear()
-    if(sortFilter.value === "A"){
 
-        const orderedCharacters = dataComplete.sort((a, b) => ((a.name).localeCompare(b.name)));
-        document.querySelector(".card-container").innerHTML += cards(orderedCharacters);
-        
-    }else if (sortFilter.value === "Z"){
-        const orderedCharacters = dataComplete.sort((a, b) => ((a.name).localeCompare(b.name)));
-        const orderInReverse = orderedCharacters.reverse();
-        document.querySelector(".card-container").innerHTML += cards(orderInReverse);
-       
+sortFilter.addEventListener ("change", () => {
+    clear();
+    const orderedCharacters = sortCharacters(sortFilter.value, dataComplete);
+    document.querySelector(".card-container").innerHTML += cards(orderedCharacters);
 
-    }else if (sortFilter.value === "Sort"){
-        document.querySelector(".card-container").innerHTML += cards(dataComplete);
-    }
-    
-}
+});

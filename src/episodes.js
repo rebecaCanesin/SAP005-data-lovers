@@ -4,7 +4,7 @@ console.log(data);
 
 const episodeData = data.episodes;
 
-const curiosityText = document.querySelector("#curiosity-paragraph");
+// const curiosityText = document.querySelector("#curiosity-paragraph");
 const seasonFilter = document.querySelector("#seasonFilter");
 
 
@@ -43,17 +43,16 @@ function clear () {
     document.querySelector(".episode-list").innerHTML = " ";
 }
 
-seasonFilter.addEventListener('change', seasonChange);
-
-function seasonChange () {
+seasonFilter.addEventListener('change', () => {
     clear();
     const seasonShow = episodeData.filter(epiCard => epiCard.season === seasonFilter.value);
     document.querySelector(".episode-list").innerHTML = episodeCards(seasonShow);
 
     if (seasonFilter.value === "season"){
         document.querySelector(".episode-list").innerHTML = episodeCards(episodeData);
-    }
-}
+    };
+});
+
 
 
 
