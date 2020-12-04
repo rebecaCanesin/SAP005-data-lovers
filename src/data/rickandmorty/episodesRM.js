@@ -63,7 +63,7 @@ export default{
             "https://rickandmortyapi.com/api/character/405"],
             "url":"https://rickandmortyapi.com/api/episode/2",
             "created":"2017-11-10T12:56:33.916Z",
-            "sinopse": "Depois de Jerry reclamar sobre a inteligência de Snuffles, o cão da família, Rick coloca um tipo de capacete no cachorro para que ele fique mais esperto. Rick e Morty entram nos sonhos do professor de matemática para tentar convencê-lo a dar uma nota boa a Morty. É nesse episódio que temos a maravilhosa sátira de Freddy Krueger, com o personagem Terry Assustador. Snuffles fica cada vez mais inteligente e forma um exército de cães com o objetivo de dominar a raça humana. "
+            "sinopse": "Depois de Jerry reclamar sobre a inteligência de Snuffles, o cão da família, Rick coloca um tipo de capacete no cachorro para que ele fique mais esperto. Rick e Morty entram nos sonhos do professor de matemática para tentar convencê-lo a dar uma nota boa a Morty. Snuffles fica cada vez mais inteligente e forma um exército de cães com o objetivo de dominar a raça humana. "
         },
 
         {
@@ -193,7 +193,7 @@ export default{
             "https://rickandmortyapi.com/api/character/394"],
             "url":"https://rickandmortyapi.com/api/episode/6",
             "created":"2017-11-10T12:56:34.339Z",
-            "sinopse": "Morty pede a Rick uma poção para fazer Jéssica se apaixonar por ele. Rick entrega ao neto, mas esquece de avisá-lo de um pequeno detalhe: ela não pode estar gripada. Morty vai ao baile da escola, dá a poção a Jéssica e tudo parece correr perfeitamente. Até que… ela espirra. O soro logo perde o controle e começa a contaminar todos no local, que querem loucamente ficar com Morty. Rick tem que criar outra poção para desfazer o efeito da anterior, e ele acaba transformando a população do planeta em “Cronenbergs”, criaturas totalmente desfiguradas. "
+            "sinopse": "Morty pede a Rick uma poção para fazer Jéssica se apaixonar por ele. Rick entrega ao neto, mas esquece de avisá-lo que ela não pode estar gripada. Morty vai ao baile da escola, dá a poção a Jéssica e tudo parece dar certo. Até que ela espirra. O soro perde o controle e contamina todos no local, que querem loucamente ficar com Morty. Rick cria outra poção para desfazer o efeito da anterior, mas acaba transformando a população do planeta em “Cronenbergs”."
         },
 
 

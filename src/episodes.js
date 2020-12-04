@@ -1,7 +1,5 @@
 import data from './data/rickandmorty/episodesRM.js';
 
-console.log(data);
-
 const episodeData = data.episodes;
 
 // const curiosityText = document.querySelector("#curiosity-paragraph");
@@ -23,7 +21,7 @@ function episodeCards (episodes){
                
             </div>
             <div>
-            <iframe src=${episode.image} width="100%" height="50%" frameBorder="0" class="giphy-embed" allowFullScreen>
+            <iframe src=${episode.image} frameborder="0">
             </iframe>
             </div>
         </div>
@@ -50,7 +48,7 @@ seasonFilter.addEventListener('change', () => {
 
     if (seasonFilter.value === "season"){
         document.querySelector(".episode-list").innerHTML = episodeCards(episodeData);
-    };
+    }
 });
 
 
