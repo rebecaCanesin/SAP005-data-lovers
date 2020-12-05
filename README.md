@@ -1,453 +1,333 @@
-# Data Lovers
+# Rickpedia
 
 ## Índice
 
-* [1. Preâmbulo](#1-preâmbulo)
-* [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-* [4. Considerações gerais](#4-considerações-gerais)
-* [5. Critérios mínimos de aceitação do
-  projeto](#5-critérios-mínimos-de-aceitação-do-projeto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Considerações técnicas](#7-considerações-técnicas)
-* [8. Pistas, dicas e leituras
-  complementares](#8-pistas-dicas-e-leituras-complementares)
-* [9. Checklist](#9-checklist)
+* [1. Prefácio](#1-prefácio)
+* [2. Apresentação do projeto](#2-apresentação-do-projeto)
+* [3. Planejamento do projeto](#3-planejamneto-do-projeto)
+* [4. Desenvolvimento do projeto](#4-desenvolvimento-do-projeto)
+* [5. Habilidades Desenvolvidas](#5-habilidades-desenvolvidas)
+
 
 ***
 
-## 1. Preâmbulo
+## 1. Prefácio
 
-Segundo a
-[Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read)
-90% dos dados que existem hoje foram gerados durante os últimos dois anos. A
-cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem precedentes.
+O projeto Rickpedia foi criado com inspiração no tema Rick and Morty. Um desenho animado de comédia e ficção científica voltado para o público adulto.
+![rickandmorty](https://cdn.europosters.eu/image/750/posters/rick-morty-portal-i40514.jpg)
 
-Apesar disso, os dados por si só são de pouca utilidade. Para que essas grandes
-quantidades de dados se convertam em **informação** compreensível para os
-usuários, precisamos entender e processar estes dados. Uma forma simples de
-fazer isso é criando _interfaces_ e _visualizações_.
+Na animação acompanhamos as aventuras interdimensionais de um cientista alcoólatra, Rick Sanchez, e seu neto, Morty Smith. Eles viajam pelo universo e por diversas dimensões arrumando confusão e quase sempre com o Morty se dando mal de algum jeito.
+Entre uma aventura e outra acompanhamos a dinâmica familiar dos personagens, entram em cena: a mãe de Morty e filha de Rick, Beth Smith, a irmã mais velha, Summer Smith, e o pai de Morty, Jeremy Smith. 
+A dinâmica familiar é retratada de forma bem real e muitas vezes dramática (como quando o divórcio dos pais de Morty acontece e é mostrado como os filhos lidam com isso), mas sempre com a comédia como pano de fundo para quase todas as situações. 
+A animação tem um público grande e fiel, apesar de demorar muito para o lançamento entre uma temporada e outra. Se quiser saber mais sobre a série clique [aqui](https://pt.wikipedia.org/wiki/Rick_and_Morty).
 
-Na imagem seguinte, você pode ver como os dados que estão na parte esquerda
-podem ser usados para construir a interface amigável e compreensível que está na
-parte direita.
 
-![json-interface](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
 
-## 2. Resumo do projeto
 
-Neste projeto você **construirá uma _página web_ para visualizar um _conjunto
-(set) de dados_** que se adeque às necessidades de seu usuário.
+## 2. Apresentação do projeto
 
-Como entregável final terá uma página web que permita **visualizar dados,
-filtrá-los, ordená-los e fazer algum cálculo agregado**. Por cálculo agregado
-nos referimos aos diversos cálculos que podem ser feitos com os dados para
-mostrar a informação mais relevante para os usuários (médias, valores máximos e
-mínimos, etc).
+O projeto Rickpedia tinha como objetivo fazer a manipulação de dados para trazer para o usuário, através de uma interface amigável, informações sobre o tema escolhido. No caso do tema trabalhado as informações contidas nesses dados eram sobre os personagens e sobre os episódios da série. A aplicação foi pensada e estruturada a partir de pesquisas com usuários e feedback dos testes de usabilidade com os usuários finais do produto. Durante o processo houve a validação das escolhas de funcionalidades a ser desenvolvidas a partir das sugestões dos próprios usuários. 
 
-Para este projeto trazemos uma série de dados de _temáticas diferentes_ para que
-você explore e decida com qual delas deseja trabalhar. Escolhemos
-especificamente estes conjuntos de dados porque cremos que se adequem bem a esta
-etapa de sua aprendizagem.
+![rickpedia](https://fontmeme.com/permalink/201201/45a0655f974e73664ce223427e239425.png)
 
-Uma vez que você defina sua área de interesse, busque entender quem é seu
-usuário e o que exatamente ele necessita saber ou ver, para que assim possa
-construir a interface que o ajude a interagir e entender melhor os dados.
+A aplicação é composta de três páginas: _Home_, _Characters_ e _Episodes_. Ao abrir a aplicação o usuário se depara com a página inicial (denominada _Home_) e encontra informações sobre do que se trata a aplicação, um pouco da história da animação Rick and Morty, link para o site oficial da série e link para assistir a série.
+O menu no topo da página apresenta para o usuário as três opções de páginas para navegação. 
 
-Este são os dados que propomos:
+Na página _Characters_ os usuários encontram os cards com informações sobre 495 personagens da série. Com a possibilidade de pesquisar cards específicos através dos filtros apresentados no início da página. Passando o mouse em cima do card (ou clicando, no caso dos celulares) o usuário tem acesso a mais informações que constam no verso do card. 
 
-* [Pokémon](src/data/pokemon/pokemon.json): Neste conjunto você encontrará uma
-  lista com os 151 Pokémon da região de Kanto, com suas respectivas estatísticas
-  utilizadas no jogo [Pokémon GO](http://pokemongolive.com).
-  - [Pesquisa com jogadores de Pokémon Go](src/data/pokemon/README.pt-BR.md)
+Na página _Episodes_ o usuário tem acesso a lista de todos os episódios da série, apresentados também em cards giratórios, com informações sobre cada episódio e sinopse.
+Ainda há a possibilidade de pesquisar os episódios por temporada, utilizando o filtro de pesquisa no início da página. 
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json): Este
-  conjunto mostra a lista de jogadores de uma liga do jogo League of Legends
-  (LoL).
-  - [Pesquisa com jogadores de LoL](src/data/lol/README.pt-BR.md)
+Em todas as páginas o usuário encontra no rodapé a possibilidade de compartilhar a aplicação em suas redes sociais, bastando clicar no ícone da rede social desejada. E também encontra o link para o repositório do projeto no GitHub (clicando no ícone do mesmo) e para a minha página do GitHub, clicando no nome da desenvolvedora da aplicação. 
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json). Lista de
-  personagens da série Rick & Morty. Você pode revisar a documentação da API
-  neste [link](https://rickandmortyapi.com).
-  - [Pesquisa com seguidores de Rick and
-    Morty](src/data/rickandmorty/README.pt-BR.md)
+Se quiser conhecer a aplicação e navegar por si mesmo é só clicar [aqui](https://rebecacanesin.github.io/SAP005-data-lovers/index.html). Divirta-se.
 
-## 3. Objetivos de aprendizagem
 
-O objetivo principal deste projeto é que aprenda a desenhar e construir uma
-interface web onde se possa visualizar e manipular dados, entendendo o que o
-usuário necessita.
+## 3. Planejamento do projeto
 
-Em outras palavras, você aprenderá a:
+Todo o planejamento do projeto foi feito utilizando a ferramenta de organização _Trello_. A seguir podemos ver uma imagem da interface com o quadro utilizado na organização desse projeto.
 
-### HTML e CSS
+![trello]()
 
-* [ ] [Uso de HTML semântico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] Uso de seletores de CSS.
-* [ ] Construir sua aplicação respeitando o desenho realizado (protótipo).
-* [ ] [Uso de flexbox em CSS.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+O planejamento do projeto seguiu as seguintes etapas:
+* Definição de histórias do usuário
+* Escolha da história de usuário trabalhada na primeira _sprint_
+* Desenho do primeiro protótipo 
+* Definição dos critérios de aceitação
+* Definição de pronto do projeto
+* Desenvolvimento da primeira funcionalidade do projeto, os cards de personagens (HTML, CSS, Javascript)
+* Desenvolvimento da segunda e terceira história de usuário (HTML, CSS, Javascript)
+* Desenvolvimento da responsividade da aplicação
+* Desenvolvimento dos testes unitários
+* Testes de usabilidade
+* Implementação das melhorias de usabilidade
 
-### DOM e Web APIs
+Para esse projeto optou-se por desenvolver as funcionalidades com as ferramentas HTML, CSS e Javascript sendo trabalhadas em conjunto. Algumas coisas não foram feitas exatamente na ordem do planejamento original.
 
-* [ ] Uso de seletores de DOM.
-* [ ] Gerenciamento de eventos de DOM.
-* [ ] [Manipulação dinâmica de DOM.](https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM/Introdu%C3%A7%C3%A3o)
-(appendChild |createElement | createTextNode| innerHTML | textContent | etc.)
-
-### JavaScript
-
-* [ ] Uso de condicionais (if-else | switch | operador ternário)
-* [ ] Uso de laços (for | for..in | for..of | while)
-* [ ] Uso de funções (parâmetros | argumentos | valor de retorno)
-* [ ] Manipular arrays (filter | map | sort | reduce)
-* [ ] Manipular objects (key | value)
-* [ ] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-| [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
-* [ ] Diferenciar entre expression e statements.
-* [ ] Diferenciar entre tipos de dados atômicos e estruturados.
-
-### Testing
-
-* [ ] [Teste unitário.](https://jestjs.io/docs/pt-BR/getting-started)
-
-### Estrutura do código e guia de estilo
-
-* [ ] Organizar e dividir o código em módulos (Modularização)
-* [ ] Uso de identificadores descritivos (Nomenclatura | Semântica)
-* [ ] Uso de linter (ESLINT)
-
-### Git e GitHub
-
-* [ ] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Gerenciar repositórios de GitHub (clone | fork | gh-pages)
-* [ ] Colaboração no Github (branches | pull requests | |tags)
-
-## 4. Considerações gerais
-
-* Este projeto será executado em duplas.
-* Este projeto será entregue através do GitHub e a interface deve ser publicada
-  no [GitHub Pages](https://pages.github.com/).
-* Tempo para completá-lo: 3 semanas.
-
-## 5. Critérios mínimos de aceitação do projeto
-
-Os critérios considerados para que tenha terminado este projeto são:
-
-### Definição de produto
-
-Documente brevemente seu trabalho no arquivo `README.md` de seu repositório,
-contando como foi o processo de desenho e como você acredita que o produto possa
-resolver o problema (ou problemas) de seu usuário.
+## 4. Desenvolvimento do projeto
 
 ### Histórias de usuário
 
-Uma vez que entenda a necessidade dos usuários, escreva as [Historias de
-Usuario](https://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_usu%C3%A1rio) que
-representem tudo que o usuário precisa fazer/ver. As **histórias de usuário**
-devem ser o resultado de seu processo de investigação/pesquisa de seus usuários.
-
-Não esqueça de incluir a definição de pronto (_definition of done_) e os
-critérios de aceitação para cada uma.
-
-Na medida do possível, termine uma história de usuário antes de passar para a
-seguinte (cumpra com as definições de pronto + critérios de aceitação).
-
-### Desenho de interface do usuário
-
-#### Protótipo de baixa fidelidade
-
-Durante seu trabalho você deverá fazer e iterar rascunhos de sua solução usando
-lápis e papel. Recomendamos que fotografe todas as iterações que fizer, suba
-para seu repositório e as mencione no `README.md`.
-
-#### Testes de usabilidade
-
-Durante o desafio você deverá fazer testes de usabilidade com usuários
-diferentes, e com base nos resultados desses testes, iterar seus desenhos de
-interface. Conte-nos quais problemas de usabilidade você detectou através dos
-testes e como os resolveu na proposta final.
-
-### Implementação da interface de usuário (HTML/CSS/JS)
-
-Após desenhar sua interface de usuário, deverá trabalhar na sua implementação.
-**Não** é necessário que construa a interface exatamente da mesma forma que
-desenhou. Terá um tempo limitado para trabalhar no projeto, então você deve
-priorizar as tarefas.
-
-No mínimo, sua implementação deverá:
-
-1. Mostrar os dados em uma interface: pode ser em cards, tabelas, listas, etc.
-2. Permitir ao usuário interagir com a interface para obter as informações que
-   necessita;
-3. Ser _responsiva_, ou seja, deve ser visualizada sem problemas a partir de
-   diversos tamanhos de tela: celulares, tablets, notebooks, etc.
-
-### Testes unitários
-
-O _boilerplate_ do projeto não inclui testes unitários. Assim, você terá que
-escrever seus próprios testes para as funções encarregadas de _processar_,
-_filtrar_ e _ordenar_ os dados, assim como _calcular_ estatísticas.
-
-Seus testes unitários devem ter cobertura mínima de 70% de _statements_
-(_sentenças_), _functions_ (_funções_), _lines_ (_linhas_), e _branches_
-(_ramos_) do arquivo `src/data.js`, que irá conter suas funções e que está
-detalhado na seção de [Considerações técnicas](#srcdatajs).
-
-## 6. Hacker edition
-
-As seções chamadas _Hacker Edition_ são **opcionais**. Se já tiver terminado
-todos os requisitos anteriores e tiver tempo, pode tentar completá-las. Dessa
-forma, você pode aprofundar e/ou exercitar mais os objetivos de aprendizagem
-deste projeto.
+Nos foi disponibilizada uma pesquisa sobre o tema Rick and Morty que constatava os seguintes pontos:
 
-Features/características extra sugeridas:
+* É importante para um espectador do show uma aplicação que contenha informações relevantes sobre os personagens, como: nome, gênero, espécie, local de origem, imagem e episódios em que aparece.
+* Também é importante para o espectador que a aplicação contenha a lista de personagens do show, o número de episódios e os diferentes locais de origem. 
 
-* Ao invés de consumir dados estáticos do repositório, pode fazer isso de forma
-  dinâmica, carregando um arquivo JSON com `fetch`. A pasta `src/data` contém
-  uma versão `.js` e uma `.json` de cada conjunto de dados.
-* Adicione à sua interface visualização de dados em forma de gráficos. Para
-  isso, recomendamos explorar bibliotecas de gráficos como
-  [Chart.js](https://www.chartjs.org/) ou [Google
-  Charts](https://developers.google.com/chart/).
-* 100% de cobertura nos testes.
 
-## 7. Considerações técnicas
+##### Histórias de usuário definidas no início do projeto
+Juntando a pesquisa prévia com uma entrevista feita com um possível usuário da aplicação, definimos seis histórias de usuário. São elas:
 
-A lógica do projeto deve estar implementada somente em JavaScript (ES6), HTML e
-CSS. Neste projeto não está permitido o uso de bibliotecas e frameworks, apenas
-[vanilla
-JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-com exceção das bibliotecas para gráficos (ver [_Parte
-opcional_](#6-hacker-edition) acima).
+* História de usuário 1:
+Como usuário quero ter acesso a lista de todos os personagens com informações sobre eles, de modo que eu possa escolher de qual personagem quero informações.
 
-Não se deve utilizar a _pseudo-variável_ `this`.
+* História de usuário 2:
+Como usuário quero ter acesso a uma lista com todos os episódios, de modo que eu possa escolher um episódio e ler o seu resumo.
 
-O _boilerplate_ contém uma estrutura de arquivos como ponto de partida, assim
-como toda a configuração de dependências:
-
-```text
-.
-├── EXTRA.md
-├── README.md
-├── package.json
-├── src
-|  ├── data (de acordo com o data que forem trabalhar)
-|  |  ├── lol
-|  |  |  ├── lol.js
-|  |  |  ├── lol.json
-|  |  |  └── README.md
-|  |  ├── pokemon
-|  |  |  ├── pokemon.js
-|  |  |  ├── pokemon.json
-|  |  |  └── README.md
-|  |  └── rickandmorty
-|  |     ├── rickandmorty.js
-|  |     └── rickandmorty.json
-|  |     └── README.md
-|  ├── data.js
-|  ├── index.html
-|  ├── main.js
-|  └── style.css
-└── test
-   └── data.spec.js
+* História de usuário 3:
+Como usuário quero ter acesso a uma lista de locais onde os personagens principais da série foram durante o show, de modo que eu conheça melhor o universo da série.
 
-directory: 6 file: 17
-```
+* História de usuário 4: 
+Como usuário quero ter acesso a uma breve história do desenho e sua criação, de modo que eu saiba um pouco mais sobre ele.
 
-### `src/index.html`
+* História de usuário 5:
+Como usuário quero ter acesso as curiosidades relativas à série, de modo que eu conheça detalhes sobre o show. 
 
-Como no projeto anterior, existe um arquivo `index.html`. Como já sabe, aqui
-entra a página que vai ser exibida ao usuário. Também serve para indicar quais
-scripts serão utilizados e juntar tudo o que foi feito.
+* História de usuário 6:
+Como usuário quero ter acesso as notícias mais recentes sobre a série, de modo que eu me mantenha atualizado com relação as datas de estréia de novos episódios.
 
-### `src/main.js`
+Convertendo as histórias de usuários em funcionalidades que precisavam ser desenvolvidas para o projeto, temos, na mesma ordem anterior, o seguinte:
 
-Recomendamos que utilize `src/main.js` para todos os códigos que tenham a ver
-com a exibição dos dados na tela. Com isto nos referimos basicamente à interação
-com o DOM. Operações como criação de nós, registro de manejadores de eventos
-(_event listeners_ ou _event handlers_) e etc.
+1. Lista de todos os personagens na tela, apresentados em cards e com os dados de cada um;
 
-Esta não é a única forma de dividir seu código. Pode utilizar mais arquivos e
-pastas, sempre e quando a estrutura estiver clara para suas colegas.
+2. Lista de todos os episódios da série com informações e sinopse;
 
-Neste arquivo você encontrará uma séris de _imports comentados_. Para carregar
-diferentes fontes de dados, você deverá "descomentar" estos _imports_. Cada um
-destes _imports_ criará uma variável `data` com os dados correspondentes à fonte
-escolhida.
+3. Filtro que apresente a lista de locais por onde os personagens principais passaram durante a série;
 
-Por exemplo, se "descomentamos" a seguinte linha:
+4. Campo contendo uma breve história sobre a criação do desenho e sua sinopse;
 
-```js
-// import data from './data/pokemon/pokemon.js';
-```
+5. Campo contendo texto com curiosidades sobre a série animada;
 
-A linha ficaria assim:
+6. Campo com notícias atuais sobre a série, linkadas de um site de notícias sobre séries.
 
-```js
-import data from './data/pokemon/pokemon.js';
-```
+A história de usuário 1 foi escolhida para dar início ao projeto por ser a mais relevante, levando em consideração os dados de pesquisa previamente disponibilizados e a entrevista realizada. 
 
-E agora teríamos a variável `data` disponível em `src/main.js`.
 
-### `src/data.js`
 
-O coração deste projeto é a manipulação de dados através de arrays e objetos.
+##### Formulário de pesquisa com os possíveis usuários
 
-Recomendamos que este arquivo contenha toda a funcionalidade que corresponda a
-obter, processar e manipular dados (suas funções):
+Um formulário de pesquisa sobre a temática do projeto foi criada por uma colega que estava trabalhando com o mesmo tema. As perguntas mais relevantes para entender nossos usuários e seus interesses foram as seguintes:
 
-* `filterData(data, condition)`: esta função receberia os dados e nos retornaria
-  os que cumprem com a condição.
+1. Você usaria um WebApp que apresentasse de maneira visual dados sobre personagens da série/animação que você acompanha? Se sim, como você usaria essa aplicação?
 
-* `sortData(data, sortBy, sortOrder)`: esta função recebe três parâmetros. O
-  primeiro, `data`, nos entrega os dados. O segundo, `sortBy`, diz respeito a
-  qual das informações quer usar para ordenar. O terceiro, `sortOrder`, indica
-  se quer ordenar de maneira crescente ou decrescente.
+2. Você assiste a série Rick e Morty?
 
-* `computeStats(data)`: essa função nos permite fazer cálculos estatísticos
-  básicos para serem exibidos de acordo com o que os dados permitem.
+3. Sobre a interface da aplicação, em qual formato você gostaria de visualizar os dados sobre os personagem?
 
-Estes nomes de funções e parâmetros são somente referência, o que vocês decidir
-utilizar vai depender da sua implementação.
+4. Sobre as funcionalidades, o quão relevante para você é filtrar os personagens pelo seu gênero.
 
-Estas funções devem ser
-[_puras_](https://imasters.com.br/desenvolvimento/serie-js-e-vida-pure-functions-funcoes-puras)
-e independentes do DOM. Estas funções serão depois usadas a partir do arquivo
-`src/main.js`, ao carregar a página e a cada vez que o usuário interagir com a
-interface (cliques, seleções, filtros, ordenação, etc).
-
-### `src/data`
+5. Sobre as funcionalidades, o quão relevante para você é filtrar os personagens pela sua espécie.
 
-Nesta pasta estão os dados de diferentes fontes. Você vai encontrar uma pasta
-para cada fonte, e dentro de cada pasta estão dois arquivos: um com a extensão
-`.js` e outro `.json`. Ambos os arquivos contém os mesmos dados; a diferença é
-que podemos usar o `.js` com uma tag `<script>`, enquanto o `.json` servirá
-para, opcionalmnente, ser carregado de forma assíncrona com
-[`fetch()`](https://developer.mozilla.org/pt-br/docs/Web/API/Fetch_API) (ver
-seção da [_Parte Opcional_](#6-hacker-edition)).
+6. Sobre as funcionalidades, o quão relevante para você é filtrar os personagens pelo lugar onde vive.
 
-### `test/data.spec.js`
-
-Você também deverá fazer os teste unitários das funções implementadas no arquivo
-`data.js`.
-
-***
-
-## 8. Pistas, dicas e leituras complementares
-
-### Primeiros passos
+7. Sobre as funcionalidades, o quão relevante para você é filtrar os personagens pelo lugar de origem. 
 
-Antes de começar a escrever o código, você deve definir seu produto com base no
-conhecimento que puder obter a respeito de seus usuários. Estas perguntas podem
-ajudar:
-
-* Quem são os usuários principais do produto?
-* Quais são os objetivos dos usuários com relação ao produto?
-* Quais são os dados mais relevantes que querem ver na interface e por quê?
-* Quando utilizam ou utilizariam o produto?
-* Toda sua investigação prévia deve ter como resultado as histórias de usuário
-  de seu projeto.
-* Não faça os protótipos de alta fidelidade de todas as suas histórias. Comece
-  somente pela que necessite para seu Sprint 1.
-
-Quando estiver pronta para codar, sugerimos começar desta forma:
-
-1. Uma das integrantes da dupla deve fazer um :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) do repositório de sua
-   turma (a equipe de formação fornecerá o link). A outra integrante da dupla
-   deve fazer um fork **a partir do repositório de sua companheira** e
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) um `remote`
-   a partir dele.
-
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   seu _fork_ para seu computador (cópia local).
-
-3. Instale as dependências do projeto com o comando `npm install`, assumindo que
-   já tenha instalado o [Node.js](https://nodejs.org/) (que inclui
-   [npm](https://docs.npmjs.com/)).
-
-4. Se tudo correr bem, deve ser capaz de executar os :traffic_light: testes
-   unitários (unit tests) com o comando `npm test`.
-
-5. Para ver a interface de seu programa no navegador, utilize o comando `npm
-   start` para subir o servidor web no endereço `http://localhost:5000`.
-
-6. Comece a codar! :rocket:
-
-***
-
-### Conteúdo de referência
-
-#### UX Design (Experiência do usuário)
-
-* Pesquisa com usuarios / entrevistas
-* Princípios de design/UI
-
-#### Desenvolvimento Front-End
-
-* Unidade de testes do curso de JavaScript do LMS.
-* Unidade de arrays do curso de JavaScript do LMS.
-* Unidade de objetos do curso de JavaScript do LMS.
-* Unidade de funções do curso de JavaScript do LMS.
-* Unidade de DOM do curso de JavaScript do LMS.
-* [Array no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array)
-* [Array.sort no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-* [Array.map no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-* [Array.filter no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro)
-* [Array.reduce no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-* [Array.forEach no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-* [Object.keys no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
-* [Object.entries no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
-* [Fetch API no MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-pt.html)
-* [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
-* [Tipos de Dados](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
-* [Modulos:
-  Export](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
-* [Modulos:
-  Import](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
-
-#### Ferramentas
-
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
-
-#### Organização do trabalho
-
-* [Histórias de Usuário](https://www.youtube.com/watch?v=sEtiCJfXTE8)
-* [Definição de pronto](https://www.youtube.com/watch?v=Kfss63Q42F8)
-* [Critérios de
-  aceitação](https://medium.com/@karladiasn/user-stories-e-crit%C3%A9rios-de-aceita%C3%A7%C3%A3o-317c48403fcd)
-* [Guia para Data
-  Lovers](https://docs.google.com/presentation/d/1bOq8ns5wsvXdksdqYL3aQoxzFQsXTVlyvlV-yxI2oBM/present?token=AC4w5VhHBbEEA9u2w8bm3Ey1Cse349frbg%3A1567540902700&includes_info_params=1&eisi=CM_ytPW4teQCFQrJgQodeTcEZg#slide=id.g5282e1a53f_1_106)
-
-***
-
-## 9. Checklist
-
-* [ ] Usar VanillaJS.
-* [ ] Não utilizar `this`.
-* [ ] Passa pelo linter (`npm run pretest`)
-* [ ] Passa pelos testes (`npm test`)
-* [ ] Testes unitários cobrem um mínimo de 70% de statements, functions, lines e
-  branches.
-* [ ] Inclui uma _definição de produto_ clara e informativa no `README.md`.
-* [ ] Inclui histórias de usuário no `README.md`.
-* [ ] Inclui rascunho da solução (protótipo de baixa fidelidade) no `README.md`.
-* [ ] Inclui uma lista de problemas detectados nos testes de usabilidade no
-  `README.md`.
-* [ ] UI: Mostra lista/tabela/etc com dados e/ou indicadores.
-* [ ] UI: Permite ordenar dados por um ou mais campos (asc e desc).
-* [ ] UI: Permite filtrar dados com base em uma condição.
-* [ ] UI: É _responsivo_.
+8. Sobre as funcionalidades, o quão relevante para você é filtrar os personagens pelo status de vida.
+
+9. Outras sugestões.
+
+10. No futuro, você toparia participar de uma pesquisa de usabilidade dessa plataforma?
+
+
+##### Resultados encontrados depois da pesquisa com os possíveis usuários
+
+A pesquisa validou as histórias de usuário que tinham sido feitas até então. Os usuários se mostraram interessados em paraticamente todas as funcionalidades que haviam sido pensadas previamente e acrescentaram mais funcionalidades a essa lista.
+A única história de usuário que não foi validada, e por isso foi descartada do planejamento, foi a história 3. Na qual faria-se uma funcionalidade para mostrar ao usuários os locais por onde os personagens principais já tinham vivido suas aventuras. 
+A pesquisa também validou a apresentação dos personagens na tela com o uso de cards.
+
+As funcionalidades deixadas como sugestão pelos usuários foram as seguintes:
+* Poder compartilhar a aplicação nas redes sociais
+* Notícias sobre a série
+* Filtrar personagens por temporada
+* Filtrar personagens por episódio
+* Lista de episódios
+
+Segundo os usuários a lista de filtros de personagens por ordem de relevância seria:
+* Filtro por espécie
+* Filtro por lugar de origem
+* Filtro por lugar onde vive
+* Filtro por status de vida
+* Filtro por gênero
+
+##### Histórias de usuário e funcionalidades implementadas
+
+As histórias de usuário implementadas foram as seguintes:
+* História 1: cards com as informações dos personagens na tela
+* História 2: lista de episódios com informações e sinopse
+* História 4: campo com breve história da série e sinopse
+
+Das funcionalidades deixadas como sugestão inicial pelos usuários, foram implementadas as seguintes:
+* Poder compartilhar a aplicação em redes sociais
+* Lista de episódios
+
+Dos filtros apontados pelos usuários por ordem de relevância todos foram implementados na aplicação.
+
+
+##### Histórias de usuário e funcionalidades que não foram implementadas
+
+As histórias de usuário que não foram implementadas foram as seguintes:
+* História 3: Filtro com os locais por onde os personagens principais já viveram aventuras (Não validada por usuários)
+* História 5: campo com texto de curiosidades sobre a série
+* História 6: notícias sobre a série
+
+Das funcionalidades sugeridas pelos usuários, as seguintes não foram implementadas:
+* Notícias sobre a série
+* Filtrar personagens por temporada
+* Filtrar personagens por episódio
+
+#### Desenho de interface de usuário:
+Com a primeira história de usuário definida, o primeiro protótipo foi criado para o projeto.
+
+* Protótipo de baixa fidelidade:
+![imagem do desenho do protótipo]("src/img/")
+
+### Critérios de aceitação
+
+Para cada história de usuário implementada foram definidos os critérios de aceitação. 
+
+##### Critérios de aceitação História 1
+* Lista de todos os personagens
+* Personagens apresentados em cards
+* Informações relevantes dos personagens nos cards
+
+##### Critérios de aceitação História 2
+* Página com a lista de episódios
+* Episódios com sinopse
+* Episódios apresentados em cards
+
+##### Critérios de aceitação História 4
+* Campo contendo texto sobre a série
+
+
+##### Critérios de aceitação de interface
+
+Para a interface do projeto como um todo foram solicitados e atendidos os seguintes critérios de aceitação de interface:
+* Mostrar os dados na tela
+* Permitir ordenação de dados
+* Permitir filtrar dados
+* Ser responsivo
+
+### Definição de pronto 
+
+Para esse projeto foram definidas e atendidas as seguintes definições de pronto:
+* Fazer testes de usabilidade
+* Implementar melhorias apontadas nos testes de usabilidade
+* Código de acordo com a guia de estilos
+* Código passando nos testes unitários desenvolvidos
+* Código no repositório
+
+
+### Testes de usabilidade 
+
+Quando a aplicação estava na fase final de desenvolvimento esta foi disponibilizada para que os usuários testassem. Após os testes cada usuário respondeu um questionário de validação dos testes dando um feedback sobre sua experiência com a aplicação. Participaram dos testes nove usuários.
+
+##### Formulário de validação dos testes
+
+O formulário de validação dos testes foi desenvolvido com as seguintes perguntas:
+
+1. O que você achou da localização das coisas na tela?
+2. Como foi a navegação no site para você?
+3. Foi fácil entender todas as funcionalidades do site?
+4. Levando em consideração o tema. Você sentiu falta de alguma informação?
+5. Se sentiu falta de alguma informação, conte para a gente.
+6. A navegação nos filtros de pesquisa foi fácil?
+7. Se não, por quê?
+8. Os filtros de pesquisa que estão disponíveis no site são suficientes?
+9. Você gostaria que tivesse outra categoria de pesquisa no site?
+10. Você excluiria alguma categoria de pesquisa?
+11. Quais categorias de pesquisa você incluiria ou excluiria?
+12. As cores do site eram agradáveis?
+13. Você sentiu alguma dificuldade de leitura, devido a baixo contraste entre as cores das letras e do fundo da página?
+14. O layout das páginas estava agradável para você?
+15. Os cards facilitaram ou dificultaram a visualização da informação?
+16. Se dificultaram, por quê?
+17. Se pudesse mudar qualquer coisa no site, o que você mudaria?
+
+Como resultados gerais a maioria dos usuários achou a aplicação de fácil navegação, com layout bom e cores satisfatórias. Conseguiram ler bem a tela, não tiveram problemas de contraste de cor de letra e cor de fundo. Conseguiram achar as informações com facilidade e entenderam facilmente como utilizar as funcionalidades do site. Alguns erros de design foram apontados por alguns usuários, com relação a paleta de cores.
+
+##### Lista de pontos de melhoria apontados pelos usuários
+
+No formulário alguns usuários apontaram melhorias que poderiam ser implementadas para melhorar sua experiência ou porque sentiram falta de alguma informação. Segue a lista de melhorias apontada pelos usuários: 
+
+* Alguns cards tinham o texto vazando na borda inferior
+* Poderia ter um aviso informando que o usuário deve clicar nos cards para visualizar as informações
+* Diminuir a quantidade de texto na página inicial
+* Link ou alguma informação sobre onde assistir a série
+* Aumentar o contraste entre o fundo da tela e os elementos nela
+* Melhorar a responsividade
+* Ter filtros que se somam
+* Melhorar a paleta de cores
+* Filtrar personagem por episódio
+* Caixa de pesquisa por texto na página de episódios
+* Feed de notícias na página inicial
+* Menu flutuante
+
+##### Melhorias aplicadas ao projeto
+
+De todas as melhorias sugeridas pelos usuários algumas já foram implementadas na aplicação, por parecerem pertinentes para a melhor experiência dos usuários. Segue a lista delas:
+
+* Consertar os cards com texto vazando
+* Aviso sobre clicar nos cards
+* Menos texto na página inicial
+* Link para assistir ao show
+* Aumento do contraste do background e caixa de texto
+* Melhoria na responsividade
+
+#### Melhorias que serão implementadas no futuro 
+
+Algumas sugestões dos usuários, assim como algumas histórias de usuários ainda não implementadas, foram escolhidas para ser desenvolvidas no futuro. Para melhoria futura da aplicação serão desenvolvidas as seguites funcionalidades:
+
+* Filtros acumulativos
+* Filtro de personagem por episódio
+* Campo com notícas sobre a série
+* Redefinição de design (paleta de cores)
+* Input de pesquisa por texto na página de episódios
+* Campo de texto com curiosidades sobre a série
+
+
+## 5. Habilidades Desenvolvidas
+
+Habilidades desenvolvidas durante o projeto:
+
+#### HTML5
+
+* HTML semântico
+
+#### CSS3
+
+* Responsividade:
+Flexbox
+Media Query
+
+#### Vanilla Javascript
+
+* Manipulação de Array (Filter, sort, map)
+* Manipulação dinâmica de DOM 
+
+#### Testes
+* Desenvolvimento de testes unitários
+
+#### UX Design
+
+* Pesquisa com o usuário
+* História de usuário
+* Teste de usabilidade
+
+#### Planejamento
+
+* Definição de pronto do projeto
+* Critérios de aceitação de projeto
+
+#### _Soft Skills_
+* Lidar com adversidades
+* Perseverança
+* Adaptabilidade
