@@ -14,6 +14,7 @@
 ## 1. Prefácio
 
 O projeto Rickpedia foi criado com inspiração no tema Rick and Morty. Um desenho animado de comédia e ficção científica voltado para o público adulto.
+
 ![rickandmorty](https://cdn.europosters.eu/image/750/posters/rick-morty-portal-i40514.jpg)
 
 Na animação acompanhamos as aventuras interdimensionais de um cientista alcoólatra, Rick Sanchez, e seu neto, Morty Smith. Eles viajam pelo universo e por diversas dimensões arrumando confusão e quase sempre com o Morty se dando mal de algum jeito.
@@ -86,7 +87,7 @@ Nos foi disponibilizada uma pesquisa sobre o tema Rick and Morty que constatava 
 * Também é importante para o espectador que a aplicação contenha a lista de personagens do show, o número de episódios e os diferentes locais de origem. 
 
 
-##### Histórias de usuário definidas no início do projeto
+#### Histórias de usuário definidas no início do projeto
 Juntando a pesquisa prévia com uma entrevista feita com um possível usuário da aplicação, definimos seis histórias de usuário. São elas:
 
 * História de usuário 1:
@@ -125,7 +126,7 @@ A história de usuário 1 foi escolhida para dar início ao projeto por ser a ma
 
 
 
-##### Formulário de pesquisa com os possíveis usuários
+#### Formulário de pesquisa com os possíveis usuários
 
 Um formulário de pesquisa sobre a temática do projeto foi criada por uma colega que estava trabalhando com o mesmo tema. As perguntas mais relevantes para entender nossos usuários e seus interesses foram as seguintes:
 
@@ -150,7 +151,7 @@ Um formulário de pesquisa sobre a temática do projeto foi criada por uma coleg
 10. No futuro, você toparia participar de uma pesquisa de usabilidade dessa plataforma?
 
 
-##### Resultados encontrados depois da pesquisa com os possíveis usuários
+#### Resultados encontrados depois da pesquisa com os possíveis usuários
 
 A pesquisa validou as histórias de usuário que tinham sido feitas até então. Os usuários se mostraram interessados em paraticamente todas as funcionalidades que haviam sido pensadas previamente e acrescentaram mais funcionalidades a essa lista.
 A única história de usuário que não foi validada, e por isso foi descartada do planejamento, foi a história 3. Na qual faria-se uma funcionalidade para mostrar ao usuários os locais por onde os personagens principais já tinham vivido suas aventuras. 
@@ -170,7 +171,7 @@ Segundo os usuários a lista de filtros de personagens por ordem de relevância 
 * Filtro por status de vida
 * Filtro por gênero
 
-##### Histórias de usuário e funcionalidades implementadas
+#### Histórias de usuário e funcionalidades implementadas
 
 As histórias de usuário implementadas foram as seguintes:
 * História 1: cards com as informações dos personagens na tela
@@ -184,7 +185,7 @@ Das funcionalidades deixadas como sugestão inicial pelos usuários, foram imple
 Dos filtros apontados pelos usuários por ordem de relevância todos foram implementados na aplicação.
 
 
-##### Histórias de usuário e funcionalidades que não foram implementadas
+#### Histórias de usuário e funcionalidades que não foram implementadas
 
 As histórias de usuário que não foram implementadas foram as seguintes:
 * História 3: Filtro com os locais por onde os personagens principais já viveram aventuras (Não validada por usuários)
@@ -206,21 +207,21 @@ Com a primeira história de usuário definida, o primeiro protótipo foi criado 
 
 Para cada história de usuário implementada foram definidos os critérios de aceitação. 
 
-##### Critérios de aceitação História 1
+#### Critérios de aceitação História 1
 * Lista de todos os personagens
 * Personagens apresentados em cards
 * Informações relevantes dos personagens nos cards
 
-##### Critérios de aceitação História 2
+#### Critérios de aceitação História 2
 * Página com a lista de episódios
 * Episódios com sinopse
 * Episódios apresentados em cards
 
-##### Critérios de aceitação História 4
+#### Critérios de aceitação História 4
 * Campo contendo texto sobre a série
 
 
-##### Critérios de aceitação de interface
+#### Critérios de aceitação de interface
 
 Para a interface do projeto como um todo foram solicitados e atendidos os seguintes critérios de aceitação de interface:
 * Mostrar os dados na tela
@@ -242,7 +243,7 @@ Para esse projeto foram definidas e atendidas as seguintes definições de pront
 
 Quando a aplicação estava na fase final de desenvolvimento esta foi disponibilizada para que os usuários testassem. Após os testes cada usuário respondeu um questionário de validação dos testes dando um feedback sobre sua experiência com a aplicação. Participaram dos testes nove usuários.
 
-##### Formulário de validação dos testes
+#### Formulário de validação dos testes
 
 O formulário de validação dos testes foi desenvolvido com as seguintes perguntas:
 
@@ -266,7 +267,7 @@ O formulário de validação dos testes foi desenvolvido com as seguintes pergun
 
 Como resultados gerais a maioria dos usuários achou a aplicação de fácil navegação, com layout bom e cores satisfatórias. Conseguiram ler bem a tela, não tiveram problemas de contraste de cor de letra e cor de fundo. Conseguiram achar as informações com facilidade e entenderam facilmente como utilizar as funcionalidades do site. Alguns erros de design foram apontados por alguns usuários, com relação a paleta de cores.
 
-##### Lista de pontos de melhoria apontados pelos usuários
+#### Lista de pontos de melhoria apontados pelos usuários
 
 No formulário alguns usuários apontaram melhorias que poderiam ser implementadas para melhorar sua experiência ou porque sentiram falta de alguma informação. Segue a lista de melhorias apontada pelos usuários: 
 
@@ -283,7 +284,7 @@ No formulário alguns usuários apontaram melhorias que poderiam ser implementad
 * Feed de notícias na página inicial
 * Menu flutuante
 
-##### Melhorias aplicadas ao projeto
+#### Melhorias aplicadas ao projeto
 
 De todas as melhorias sugeridas pelos usuários algumas já foram implementadas na aplicação, por parecerem pertinentes para a melhor experiência dos usuários. Segue a lista delas:
 
