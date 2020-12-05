@@ -318,7 +318,7 @@ Habilidades desenvolvidas durante o projeto:
 #### CSS3
 
 * Responsividade:
-Flexbox
+Flexbox, 
 Media Query
 
 #### Vanilla Javascript
