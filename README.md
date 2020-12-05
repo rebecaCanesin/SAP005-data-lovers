@@ -47,7 +47,19 @@ Se quiser conhecer a aplicação e navegar por si mesmo é só clicar [aqui](htt
 
 Todo o planejamento do projeto foi feito utilizando a ferramenta de organização _Trello_. A seguir podemos ver uma imagem da interface com o quadro utilizado na organização desse projeto.
 
-![trello]()
+![trello](src/img/trello.png)
+
+No quadro do _Trello_ podemos visualizar as listas criadas para organização do projeto.
+* Backlog do produto
+* A fazer
+* Estudar
+* Funcionalidades não implementadas
+* Em andamento
+* Problemas para resolver
+* Concluído da Sprint vigente (no caso Sprint 3)
+* Problemas resolvidos
+* Concluído na sprint passada (no caso sprint 1)
+
 
 O planejamento do projeto seguiu as seguintes etapas:
 * Definição de histórias do usuário
@@ -188,7 +200,7 @@ Das funcionalidades sugeridas pelos usuários, as seguintes não foram implement
 Com a primeira história de usuário definida, o primeiro protótipo foi criado para o projeto.
 
 * Protótipo de baixa fidelidade:
-![imagem do desenho do protótipo]("src/img/")
+![imagem do desenho do protótipo](src/img/prototipodata.jpg)
 
 ### Critérios de aceitação
 
