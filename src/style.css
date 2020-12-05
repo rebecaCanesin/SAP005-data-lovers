@@ -209,7 +209,7 @@ ul{
     font-weight: bold;
     color: #ffffff;
 }
-h2{
+.text-front{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     color: #000000;
@@ -317,11 +317,10 @@ p{
 .site-footer{
     background-color: #36a02c;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-    height: 150px;
+    align-items: center;
     margin-top: 150px;
-    padding: 50px;
 }
 .season-filter{
     display: flex;
@@ -356,7 +355,6 @@ p{
     font-size: 20px;
 }
 .text-home{
-    width: 100vw;
     margin-top: 70px;
     display: flex;
     justify-content: flex-start;
@@ -366,6 +364,9 @@ p{
 }
 .text-about{
     width: 80vw;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 .mobile-text{
     display: none;
@@ -377,4 +378,12 @@ p{
     .mobile-text{
         display:block;
     }
+}
+.link-externo{
+    text-decoration: none;
+    color: #36a02c;
+}
+.link-footer{
+    text-decoration: none;
+    color: #ffffff;
 }
